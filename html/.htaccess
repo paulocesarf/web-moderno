@@ -1,0 +1,17 @@
+# Ativa o mecanismo de reescrita
+RewriteEngine On
+
+# Ignore files and directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Reescreve a URL amigável 'dashboard' para 'dashboard.php'
+RewriteRule ^login$ index.php [L]
+RewriteRule ^registrar$ registrar.php [L]
+RewriteRule ^dashboard$ dashboard.php [L]
+RewriteRule ^sair$ logout.php [L]
+
+
+
+
